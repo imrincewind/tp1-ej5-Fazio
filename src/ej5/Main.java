@@ -4,18 +4,18 @@ public class Main {
 
 	public static void main(String[] args) {
 		MySimpleLinkedList listaOrdenada1 = new MySimpleLinkedList();
-		listaOrdenada1.insertElementAlPrincipio(1);
-		listaOrdenada1.insertElementAlPrincipio(4);
-		listaOrdenada1.insertElementAlPrincipio(6);
-		listaOrdenada1.insertElementAlPrincipio(7);
 		listaOrdenada1.insertElementAlPrincipio(10);
+		listaOrdenada1.insertElementAlPrincipio(7);
+		listaOrdenada1.insertElementAlPrincipio(6);
+		listaOrdenada1.insertElementAlPrincipio(4);
+		listaOrdenada1.insertElementAlPrincipio(1);
 		
 		MySimpleLinkedList listaOrdenada2 = new MySimpleLinkedList();
-		listaOrdenada2.insertElementAlPrincipio(2);
-		listaOrdenada2.insertElementAlPrincipio(3);
-		listaOrdenada2.insertElementAlPrincipio(5);
-		listaOrdenada2.insertElementAlPrincipio(8);
 		listaOrdenada2.insertElementAlPrincipio(9);
+		listaOrdenada2.insertElementAlPrincipio(7);
+		listaOrdenada2.insertElementAlPrincipio(4);
+		listaOrdenada2.insertElementAlPrincipio(3);
+		listaOrdenada2.insertElementAlPrincipio(1);
 		
 		MySimpleLinkedList listaMezclada = Ordenador.mezclarListas(listaOrdenada1, listaOrdenada2);
 		
@@ -37,10 +37,10 @@ public class Main {
 		
 		MySimpleLinkedList listaDesordenada2 = new MySimpleLinkedList();
 		listaDesordenada2.insertElementAlPrincipio(9);
-		listaDesordenada2.insertElementAlPrincipio(1);
+		listaDesordenada2.insertElementAlPrincipio(3);
 		listaDesordenada2.insertElementAlPrincipio(14);
-		listaDesordenada2.insertElementAlPrincipio(5);
-		listaDesordenada2.insertElementAlPrincipio(7);
+		listaDesordenada2.insertElementAlPrincipio(15);
+		listaDesordenada2.insertElementAlPrincipio(2);
 		
 		MySimpleLinkedList listaMezclada2 = Ordenador.mezclarListas(listaDesordenada1, listaDesordenada2);
 		for (int i = 0; i < listaMezclada2.getSize(); i++) {

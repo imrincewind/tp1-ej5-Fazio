@@ -28,6 +28,7 @@ public class MySimpleLinkedList {
 		Node nodo = new Node(i);
 		if (first == null) {
 			first = nodo;
+			last = nodo;
 		} else {
 			if (first.getData() > i) {
 				nodo.setNext(first);
@@ -39,9 +40,47 @@ public class MySimpleLinkedList {
 					nodoAnterior = nodoActual;
 					nodoActual = nodoActual.getNext();
 				}
+				if (nodoActual.getData() < nodo.getData()){
+					last.setNext(nodo);
+					last = nodo;
 				
+					
+				}else{
 					nodo.setNext(nodoActual);
 					nodoAnterior.setNext(nodo);	
+				}
+				
+				
+			}
+		}
+		size++;
+	}
+	public void insertOrdenadoDuplicado(Integer i) {
+
+		Node nodo = new Node(i);
+		if (first == null) {
+			first = nodo;
+			last = nodo;
+		} else {
+			if (first.getData() > i) {
+				nodo.setNext(first);
+				first = nodo;
+			} else {
+				Node nodoActual = first;
+				Node nodoAnterior = first;
+				while ((nodoActual.getNext() != null) && (nodoActual.getData() < i)) {
+					nodoAnterior = nodoActual;
+					nodoActual = nodoActual.getNext();
+				}
+				if (nodoActual.getData() < nodo.getData()){
+					last.setNext(nodo);
+					last = nodo;
+				
+					
+				}else{
+					nodo.setNext(nodoActual);
+					nodoAnterior.setNext(nodo);	
+				}
 				
 				
 			}
@@ -94,6 +133,9 @@ public class MySimpleLinkedList {
 		Node nodo = new Node(i);
 		nodo.setNext(first);
 		first = nodo;
+		if (size == 0 ){
+			last = nodo;
+		}
 		size++;
 	}
 	
